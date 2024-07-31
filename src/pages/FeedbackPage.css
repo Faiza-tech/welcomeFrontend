@@ -1,0 +1,109 @@
+/* FeedbackPage.css */
+
+/* Feedback container */
+.feedback-container {
+    max-width: 800px; /* Limit the width of the feedback container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding inside the container */
+}
+
+/* Feedback header */
+.feedback-header {
+    font-size: 28px; /* Set the font size */
+    font-weight: bold; /* Set the font weight to bold */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+/* Feedback description */
+.feedback-description {
+    font-size: 18px; /* Set the font size */
+    margin-bottom: 30px; /* Add bottom margin for spacing */
+}
+
+/* Feedback input textarea */
+.feedback-input {
+    width: 100%; /* Take up full width */
+    height: 150px; /* Set the height */
+    padding: 10px; /* Add padding */
+    font-size: 16px; /* Set the font size */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+/* Feedback category dropdown */
+.category-dropdown {
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+/* Category select dropdown */
+.category-select {
+    width: 100%; /* Take up full width */
+    padding: 10px; /* Add padding */
+    font-size: 16px; /* Set the font size */
+}
+
+/* Submit button */
+.submit-button {
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Set the font size */
+    background-color: #007bff; /* Set the background color */
+    color: white; /* Set the text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Set cursor to pointer */
+}
+
+/* Hover effect for submit button */
+.submit-button:hover {
+    background-color: #0056b3; /* Darken the background color on hover */
+}
+
+/* User feedback section */
+.user-feedback {
+    margin-top: 50px; /* Add top margin for spacing */
+}
+
+/* Individual feedback item */
+.feedback-item {
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+/* User comment */
+.user-comment {
+    font-size: 16px; /* Set the font size */
+    line-height: 1.5; /* Set the line height */
+}
+
+/* Social media section */
+.social-media {
+    margin-top: 50px; /* Add top margin for spacing */
+}
+
+/* Social media section header */
+.social-media h2 {
+    font-size: 24px; /* Set the font size */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+}
+
+/* Social media icons container */
+.social-media-icons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the icons horizontally */
+}
+
+/* Social media icon links */
+.social-media-icons a {
+    display: inline-block; /* Set display to inline-block */
+    margin: 0 10px; /* Add margin around each icon */
+}
+
+/* Social media icons */
+.social-media-icons img {
+    width: 40px; /* Set the width */
+    height: 40px; /* Set the height */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Hover effect for social media icons */
+.social-media-icons img:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}

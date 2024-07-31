@@ -1,0 +1,204 @@
+
+.home-container{
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+
+}
+
+
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  /* Set the height of the banner */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  /* Position the text vertically centered */
+  left: 24%;
+  /* Position the text horizontally centered */
+  transform: translate(-50%, -50%);
+  /* Center the text using transform */
+  color: rgb(25, 99, 60);
+  /* text-align: center;*/
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+ 
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.banner-text h1{
+  font-size: 3rem;
+}
+
+/* '.move-text' and '@keyframes move' for animation , 
+This effect makes the text move slightly back and forth, which can add a dynamic and engaging element to your banner.
+
+The .move-text class and the associated @keyframes move animation were added as an example to give the "to" text in the banner a simple animation effect. This effect makes the text move slightly back and forth, which can add a dynamic and engaging element to your banner.
+
+Here's a more detailed explanation of how it works and how you can integrate it:
+
+.move-text Class:
+
+This class is applied to the text you want to animate. In this case, it's the "to" text in the banner.
+The class uses CSS animation properties to define the animation name (move), duration (1s), and behavior (infinite alternate).
+@keyframes move:
+
+This defines the animation itself.
+The 0% and 100% keyframes specify the start and end points of the animation.
+transform: translateX(0) means no movement at the start.
+transform: translateX(10px) moves the element 10 pixels to the right at the end.
+The alternate keyword makes the animation play forwards and then backwards, creating a back-and-forth motion.*/
+.move-text {
+  animation: move 1.5s infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+/* Introduction section styles */
+
+.intro-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.further-content {
+  padding: 20px;
+  min-width: 600px;
+
+}
+
+
+.intro-section p,
+.further-content p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* Adjust the column width as needed */
+  grid-gap: 20px;
+  /* Adjust the gap between images */
+}
+
+.images-container img {
+  width: 100%;
+  /* Ensure images fill their grid cells */
+  height: 100%;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Ensure images cover the entire grid cell */
+}
+
+.banner2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* -webkit-filter: blur(5px); /* For Safari 
+  filter: blur(5px); /* Adjust the blur intensity as needed */
+}
+
+.map-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
+
+
+/*
+@media screen and (max-width: 480px) {
+
+  .banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    /* Set the height of the banner *
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 49%;
+    /* Position the text vertically centered *
+    left: 27%;
+    /* Position the text horizontally centered *
+    transform: translate(-50%, -50%);
+    /* Center the text using transform *
+    color: rgb(25, 99, 60);
+    /* text-align: center;*
+    padding: 20px 20px 20px 30px;
+    /* background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background *
+    font-size: 1.3rem;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+
+  .banner-text .move-text {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+
+  }
+
+
+  .intro-section,
+  .further-content {
+    padding: 10px;
+    /* Reduce padding for smaller screens *
+    min-width: auto;
+    /* Allow content to adjust to smaller screens *
+  }
+
+  .images-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* Adjust column width for smaller screens *
+    grid-gap: 5px;
+    /* Reduce gap between images *
+  }
+
+  .intro-section p,
+  .further-content p {
+    font-size: 1rem;
+    /* Decrease font size for smaller screens *
+  }
+}*/

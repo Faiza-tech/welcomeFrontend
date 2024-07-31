@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+/* LegalAssistance.css */
+
+.containerLegal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.Legaltitle {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  color: #253b85;
+}
+
+.Legaldescription {
+  margin-bottom: 20px;
+  color: #555;
+  text-align: center;
+}
+
+.Legallinks {
+  width: 100%;
+  max-width: 1300px; /* Adjusted maximum width */
+  margin-left: 20px; /* Equal space on both sides */
+  margin-right: 20px; /* Equal space on both sides */
+  /* Set height and overflow properties if needed */
+  /* height: 400px; */
+  /* overflow: auto; */
+}
+
+.Legallink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Set the width to 100% */
+ 
+}
+
+.Legallink:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Background colors for different Legallink containers */
+.Legallink1 {
+  background: #e3f2fd; /* Light Blue */
+}
+
+.Legallink2 {
+  background: #f9e4d5; /* Light Peach */
+}
+
+.Legallink3 {
+  background: #e8f5e9; /* Light Green */
+}
+
+.Legallink a {
+  font-size: 1.6rem;
+  color: #253b85;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.Legallink a:hover {
+  color: #af1212;
+}
+
+.Legallink-description {
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.Legalimage-content {
+  flex: 1; /* Make the image container take up 50% of the space */
+}
+
+.Legalimage-content img {
+  width: 100%; /* Ensure the image takes up the full width of its container */
+  height: 400px; /* Maintain aspect ratio ,   was--> height: auto; but i changed */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Legallink-content {
+  flex: 1; /* Make the text container take up 50% of the space */
+  padding-left: 20px; /* Space between image and text */
+}
+
+@media (max-width: 768px) {
+  .Legallink {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Legalimage-content {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add space between image and text */
+  }
+
+  .Legalimage-content img {
+    max-width: 100%;
+  }
+}
+

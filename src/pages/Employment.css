@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.Eemployment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-size: 2.6rem; /* Increased font size */
+  font-family: "Roboto", sans-serif;
+}
+
+.Etitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3889d1;
+  font-size: 2.6rem; /* Increased title font size */
+}
+
+.Econtent-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.Etext-content p {
+  font-size: 1.3rem;
+  padding: 0 20px 10px;
+}
+
+.Etext-content, .Eimage-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.Elink-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between links */
+}
+
+.Elink {
+  background-color: #e6e5db;
+  padding: 15px; /* Increased padding */
+  border-radius: 5px;
+}
+
+.Elink a {
+  color: #3889d1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem; /* Increased font size for links */
+}
+
+.Elink a:hover {
+  background-color: #d1e0ef;
+  color: #0d4f8d;
+}
+
+.Elink p {
+  color: #555;
+  font-size: 1.2rem; /* Increased font size for link descriptions */
+}
+
+.Eimage-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Eimage-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+:root {
+    --primary-color: #007bff; /* Define your primary color here */
+}
+
+.community-container {
+    margin: 20px 30px 10px 80px; /* Adjust margin */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    max-width: 1500px;
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.community-title {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+    color: var(--primary-color); /* Use primary color */
+    text-align: center;
+}
+
+.community-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 10px;
+}
+
+.community-info {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px; /* Adjust the width */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.community-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.community-image-container {
+    width: 100%;
+    height: 200px; /* Set a fixed height for images */
+    overflow: hidden;
+}
+
+.community-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.community-text-content {
+    padding: 20px;
+}
+
+.community-name {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--primary-color); /* Use primary color */
+}
+
+.community-description {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.community-website a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* Use primary color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.community-website a:hover {
+    background-color: #0056b3;
+}
+
+.explore-more {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
