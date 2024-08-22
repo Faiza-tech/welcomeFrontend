@@ -47,7 +47,9 @@ const Nav = ({ userName, setUserName }) => {
                 <Link to="/">
                     <img src={logo} alt="logo" width={90} height={60} />
                 </Link>
+               
                 <h2>WelcomeAbroad</h2>
+               
             </div>
 
             <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>

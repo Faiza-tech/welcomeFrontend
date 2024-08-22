@@ -41,7 +41,7 @@ nav .menu {
 }
 
 nav .menu span {
-    height: 4px;
+    height: 2px;
     width: 100%;
     background-color: #2C5F2D; /* Forest Green */
     border-radius: 2px;
@@ -100,7 +100,8 @@ nav ul li a:hover {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 140%;
+    /*top: 100%;*/
     left: 0;
     background-color: #aee69f; /* Light Green */
     box-shadow: 0 8px 16px rgba(40, 119, 11, 0.9);

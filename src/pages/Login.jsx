@@ -1,14 +1,35 @@
 import '../pages/Login.css';
 import { useState } from 'react';
 
-//const apiUrl = `http://localhost:3030`;
-
-//const apiUrl = `http://localhost:3000`;
-//const apiUrl = `https://abroadhelp.up.railway.app`
+//const apiUrl = `http://localhost:3030`; // Adjust as needed
 const apiUrl = `https://welcomebackend.onrender.com`
 
-export default function LogInForm({ handleSubmit, setToggleSignUp, toggleSignUp, userName, setUserName }) {
+export default function LogInForm({ setUserName }) {
   const [logIn, setLogIn] = useState({ email: '', password: '' });
+
+  const handleLogin = async ({ email, password }) => {
+    try {
+      const response = await fetch(`${apiUrl}/user/logIn`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        const userDetails = await response.json();
+        localStorage.setItem('user', JSON.stringify(userDetails));
+        setUserName(userDetails.userName);
+        console.log('Login successful:', userDetails);
+      } else {
+        const error = await response.json();
+        console.error('Login failed:', error);
+      }
+    } catch (error) {
+      console.error('An error occurred during login:', error);
+    }
+  };
 
   const handleSubmitDecorator = async (e) => {
     e.preventDefault();
@@ -23,32 +44,10 @@ export default function LogInForm({ handleSubmit, setToggleSignUp, toggleSignUp,
     });
   };
 
-  const handleLogin = async ({ email, password }) => {
-    try {
-      const verifyLogin = await fetch(`${apiUrl}/user/logIn`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-      if (verifyLogin.ok) {
-        const userDetails = await verifyLogin.json();
-        localStorage.setItem('user', JSON.stringify(userDetails));
-        let user = JSON.parse(localStorage.getItem('user'));
-        setUserName(user.userName);
-      } else {
-        console.error('Login failed:', verifyLogin.statusText);
-      }
-    } catch (error) {
-      console.error('An error occurred during login:', error);
-    }
-  };
-
   return (
     <div className="logincontainer">
       <form className="loginform" onSubmit={handleSubmitDecorator}>
-        <h2>LogIn</h2>
+        <h2>Log In</h2>
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -58,6 +57,7 @@ export default function LogInForm({ handleSubmit, setToggleSignUp, toggleSignUp,
             placeholder="Please Enter your Email"
             value={logIn.email}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="form-group">
@@ -69,11 +69,10 @@ export default function LogInForm({ handleSubmit, setToggleSignUp, toggleSignUp,
             placeholder="Please Enter your Password"
             value={logIn.password}
             onChange={handleChange}
+            required
           />
         </div>
         <button type="submit">Submit</button>
-        {/**   <p>Yet to sign up? Click on the button below</p>
-        <button type="button" onClick={() => setToggleSignUp(!toggleSignUp)}>Sign Up</button>*/}
       </form>
     </div>
   );
